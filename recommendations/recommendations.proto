@@ -1,5 +1,5 @@
 syntax = "proto3";
-import "../server_base_structs.proto";
+import "server_base_structs.proto";
 package ProtoSpace;
 
 message IgnoredFandomsToken{

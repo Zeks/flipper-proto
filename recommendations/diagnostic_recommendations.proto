@@ -1,6 +1,6 @@
 syntax = "proto3";
-import "../server_base_structs.proto";
-import "recommendations.proto";
+import "server_base_structs.proto";
+import "recommendations/recommendations.proto";
 
 package ProtoSpace;
 
