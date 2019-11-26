@@ -36,6 +36,7 @@ message RecListUserData{
     IgnoredFandomsToken ignored_fandoms = 1;
     NegativeTagsToken negative_feedback = 2;
     repeated int32 liked_authors        = 3;
+    repeated int32 ignored_fics         = 4;
 }
 
 
