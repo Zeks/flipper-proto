@@ -32,6 +32,7 @@ message UserData{
     IgnoredFandomsToken ignored_fandoms              = 2;
     RecommendationListDataToken recommendation_list  = 3;
     ScoreListDataToken scores_list                   = 4;
+    repeated int32 snoozes                           = 5;
 }
 
 message SearchTask
