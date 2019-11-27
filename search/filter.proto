@@ -154,4 +154,5 @@ message Filter{
     string protocol_version                     = 21;
     bool use_and_for_tags                       = 22;
     bool filter_version                         = 23; 
+    bool display_snoozed                        = 24;
 }
