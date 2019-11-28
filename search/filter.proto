@@ -89,7 +89,7 @@ message ContentMatchFilter
 
 message TagFilter{
     bool ignore_already_tagged  = 1;
-    //repeated string active_tags = 2; // this will only be necessary when proper DB with uac is in place
+    repeated string active_tags = 2; 
     //repeated int32 all_tagged   = 3; // this will only be necessary when proper DB with uac is in place
 }
 
