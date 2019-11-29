@@ -14,7 +14,7 @@ message NegativeTagsToken{
 
 message RecommendationListRequestData{
     string list_name                            = 1;
-    RecommendationListParams general_params      = 2;
+    RecommendationListParams general_params     = 2;
     SiteIDPack id_packs                         = 3;
     RecListUserData user_data                   = 4;
 };
@@ -22,14 +22,16 @@ message RecommendationListRequestData{
 
 message RecommendationListParams{
     int32 users_ffn_profile_id          = 1;
-    bool is_automatic                   = 2;
+    int32 always_pick_at                = 2;
     int32 min_fics_to_match             = 3;
     int32 max_unmatched_to_one_matched  = 4;
-    int32 always_pick_at                = 5;
+    
+    bool is_automatic                   = 5;
     bool use_weighting                  = 6;
     bool use_mood_filtering             = 7;
     bool use_dead_fic_ignore            = 8;
-    bool use_dislikes              = 9;
+    bool use_dislikes                   = 9;
+    
 }
 
 
@@ -44,18 +46,19 @@ message RecListUserData{
 message RecommendationListData{
     bool list_ready                             = 1;
     string list_name                            = 2;
-    repeated int32 fic_ids                      = 3;
-    repeated int32 fic_matches                  = 4;
-    repeated double no_trash_score             = 5;
-                                                
-    map<int32, int32> match_report              = 6;
-    repeated RecommendationBreakdown breakdowns = 7;
 
-    // these are internal ids
-    // no conflict & harassment possibilities here
-    repeated int32 author_ids                   = 8;
-    repeated int32 purged                       = 9;
-    RecommendationListParams used_params        = 10;
+    RecommendationListParams used_params        = 3;
+    
+    repeated int32 fic_ids                      = 4;
+    repeated int32 fic_matches                  = 5;
+    repeated int32 author_ids                   = 6;
+    repeated int32 purged                       = 7;
+    
+    repeated double no_trash_score              = 8;
+                                                
+    map<int32, int32> match_report              = 9;
+    repeated RecommendationBreakdown breakdowns = 10;
+    
 }
 
 

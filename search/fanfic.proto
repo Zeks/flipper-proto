@@ -27,7 +27,11 @@ message SiteData{
 
 message SitePack{
     SiteData ffn    = 1;
-    SiteData ao3    = 2;
+    // below are just placeholders
+    SiteData sb     = 2;
+    SiteData sv     = 3;
+    SiteData qq     = 4;
+    SiteData ao3    = 5;
     // ...
 }
 
@@ -50,29 +54,32 @@ message Fanfic{
 
     bool is_valid                   = 1;
     int32 id                        = 2;
-    int32 complete                  = 3;
-    int32 recommendations           = 4;
+    int32 author_id                 = 3; 
+    int32 complete                  = 4;
+    int32 recommendations           = 5;
 
-    string word_count               = 5;
-    string chapters                 = 6;
-    string reviews                  = 7;
-    string favourites               = 8;
-    string follows                  = 9;
-    string rated                    = 10;
-    string fandom                   = 11;
-    string author                   = 12;
-    string title                    = 13;
-    string summary                  = 14;
-    string language                 = 15;
-    string published                = 16; // yyyyMMdd
-    string updated                  = 17; // yyyyMMdd
-    string characters               = 18;
+    string word_count               = 6;
+    string chapters                 = 7;
+    string reviews                  = 8;
+    string favourites               = 9;
+    string follows                  = 10;
+    string rated                    = 11;
+    string fandom                   = 12;
+    string author                   = 13;
+    string title                    = 14;
+    string summary                  = 15;
+    string language                 = 16;
+    string published                = 17; // yyyyMMdd
+    string updated                  = 18; // yyyyMMdd
+    string characters               = 19;
+    string genres                   = 20;    
     
-    repeated string fandoms         = 19;
-    repeated int32  fandom_ids      = 20;
-    string genres                   = 21;    
-    SitePack site_pack              = 22;
-    repeated GenreData real_genres  = 23;
-    SlashData slash_data            = 24; 
-    int32 author_id                 = 25; 
+    SitePack site_pack              = 21;
+    SlashData slash_data            = 22; 
+    
+    repeated string fandoms         = 23;
+    repeated int32  fandom_ids      = 24;
+    
+    repeated GenreData real_genres  = 25;
+    
 }

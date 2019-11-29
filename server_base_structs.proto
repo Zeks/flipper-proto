@@ -3,10 +3,16 @@ syntax = "proto3";
 
 package ProtoSpace;
 
+message ProtocolVersion{
+    int32 major;
+    int32 minor;
+}
 
 message ControlInfo{
-    string user_token       = 1;
+    string user_token                       = 1;
+    ProtocolVersion protocol_version        = 2;
 }
+
 
 message ResponseInfo{
     bool is_valid                = 1;
