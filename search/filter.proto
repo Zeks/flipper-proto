@@ -129,6 +129,7 @@ message TagFilter{
     bool ignore_already_tagged  = 1;
     bool use_and_for_tags       = 2;
     bool tags_are_for_authors   = 3;
+    repeated string active_tags = 4;
 }
 
 message SizeLimits{
@@ -161,8 +162,8 @@ message Filter{
     };
     
     enum ESortDirection{
-    sd_descending = 0;
-    sd_ascending  = 1;
+    sd_ascending  = 0;
+    sd_descending = 1;
     }
     
     enum ESortMode {
@@ -178,7 +179,7 @@ message Filter{
     sm_genre_values      = 9;
     sm_genre_scores      = 10;
    }
-    enum RatingFilter{
+    enum ERatingFilter{
         rt_t_m        = 0;
         rt_t          = 1;
         rt_m          = 2;
