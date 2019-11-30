@@ -38,10 +38,7 @@ message DiagnosticRecommendationListData{
     // fic_id -> list of author ids
     repeated AuthorsForFic matches                                             = 5; 
     repeated AuthorParamsForRecommendationList author_params                   = 6;
-
 }
-
-
 
 message DiagnosticRecommendationListCreationResponse{
     string list_token                     = 1; // garbo for now
