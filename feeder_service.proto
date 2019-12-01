@@ -126,11 +126,12 @@ message StatusRequest{
 }
 
 message StatusResponse{
-    bool   database_attached    = 1; // for when I need to switch symlinks
-    string last_database_update = 2; // yyyyMMdd hhmm, currently not implemented
-    string message_of_the_day   = 3;
-    bool need_to_show_motd      = 4;
-    int32 protocol_version      = 5; 
+    bool   database_attached          = 1; // for when I need to switch symlinks
+    string last_database_update       = 2; // yyyyMMdd hhmm, currently not implemented
+    string message_of_the_day         = 3;
+    bool need_to_show_motd            = 4;
+    int32 protocol_version            = 5; // outdated, will be removed for V3.
+    ProtocolVersion  current_protocol = 6;   
 }
 
 message FavListDetailsRequest{
