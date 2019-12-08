@@ -4,8 +4,8 @@ syntax = "proto3";
 package ProtoSpace;
 
 message ProtocolVersion{
-    int32 major    = 1;
-    int32 minor    = 2;
+    int32 major_version    = 1;
+    int32 minor_version    = 2;
 }
 
 message ControlInfo{
