@@ -44,20 +44,21 @@ message RecListUserData{
 
 
 message RecommendationListData{
-    bool list_ready                             = 1;
-    string list_name                            = 2;
+    bool success                                = 1; 
+    bool list_ready                             = 2;
+    string list_name                            = 3;
 
-    RecommendationListParams used_params        = 3;
+    RecommendationListParams used_params        = 4;
     
-    repeated int32 fic_ids                      = 4;
-    repeated int32 fic_matches                  = 5;
-    repeated int32 author_ids                   = 6;
-    repeated int32 purged                       = 7;
+    repeated int32 fic_ids                      = 5;
+    repeated int32 fic_matches                  = 6;
+    repeated int32 author_ids                   = 7;
+    repeated int32 purged                       = 8;
     
-    repeated double no_trash_score              = 8;
+    repeated double no_trash_score              = 9;
                                                 
-    map<int32, int32> match_report              = 9;
-    repeated RecommendationBreakdown breakdowns = 10;
+    map<int32, int32> match_report              = 10;
+    repeated RecommendationBreakdown breakdowns = 11;
     
 }
 
