@@ -12,7 +12,7 @@ message ControlInfo{
     string user_token                       = 1;
     ProtocolVersion protocol_version        = 2;
     string user_type                        = 3; 
-    string sub_user_token                   = 4;
+    string application_token                = 4;
 }
 
 
