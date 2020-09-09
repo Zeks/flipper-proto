@@ -207,4 +207,5 @@ message Filter{
     RecommendationsFilter recommendations       = 15;
     GenreFilter genre_filter                    = 16;
     SubGenreFilter subgenre_filter              = 17;
+    string rng_sequence_name                    = 18;
 }
