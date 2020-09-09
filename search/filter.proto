@@ -140,6 +140,7 @@ message SizeLimits{
 message Randomizer{
     bool randomize_results                 = 1;
     bool rebuild_random_sequence           = 2;
+    string sequence_name                   = 3;  
 }
 
 message SourcesFilter{
@@ -151,7 +152,6 @@ message SnoozeFilter{
     bool display_all                       = 1;
     bool display_expired                   = 2;
 }
-
 
 message Filter{
     enum EFilterMode{
@@ -207,5 +207,4 @@ message Filter{
     RecommendationsFilter recommendations       = 15;
     GenreFilter genre_filter                    = 16;
     SubGenreFilter subgenre_filter              = 17;
-    string rng_sequence_name                    = 18;
 }
