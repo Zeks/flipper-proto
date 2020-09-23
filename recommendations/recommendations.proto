@@ -12,11 +12,16 @@ message NegativeTagsToken{
     repeated int32 strongNegatives      = 2;
 }
 
+message ResponseDataControls{
+    bool ignore_breakdowns = 1;
+}
+
 message RecommendationListRequestData{
     string list_name                            = 1;
     RecommendationListParams general_params     = 2;
     SiteIDPack id_packs                         = 3;
     RecListUserData user_data                   = 4;
+    ResponseDataControls response_data_controls         = 5;
 };
 
 
