@@ -60,6 +60,7 @@ message BasicFilters{
     
     bool ensure_completed           = 7;
     bool ensure_active              = 8;
+    int32 last_active_days          = 9;
 }
 
 message ReviewBias{

@@ -21,7 +21,7 @@ message RecommendationListRequestData{
     RecommendationListParams general_params     = 2;
     SiteIDPack id_packs                         = 3;
     RecListUserData user_data                   = 4;
-    ResponseDataControls response_data_controls         = 5;
+    ResponseDataControls response_data_controls = 5;
 };
 
 
