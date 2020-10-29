@@ -92,10 +92,10 @@ message ContentMatchFilter
     int32 fandom                        = 1; 
     int32 crossover_fandom              = 2;
     
-    bool use_ignored_fandoms            = 3;
+    bool use_ignored_fandoms            = 3;  // deprecating
     bool include_crossovers             = 4;
     bool crossovers_only                = 5;
-    bool other_fandoms_mode             = 6;
+    bool other_fandoms_mode             = 6;  // deprecating
     
 
     repeated string word_exclusion      = 7;

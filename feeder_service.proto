@@ -27,12 +27,15 @@ message ScoreListDataToken
     repeated int32 list_of_scores                   = 2;
 }
 
+
+
 message UserData{
     TagsToken user_tags                              = 1;
-    IgnoredFandomsToken ignored_fandoms              = 2;
+    IgnoredFandomsToken ignored_fandoms              = 2; // deprecating
     RecommendationListDataToken recommendation_list  = 3;
     ScoreListDataToken scores_list                   = 4;
     repeated int32 snoozes                           = 5;
+    repeated FandomStateToken fandomStateTokens      = 6;
 }
 
 message SearchTask

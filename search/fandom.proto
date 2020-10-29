@@ -26,3 +26,21 @@ message Fandom{
     string name      = 2;
     string website   = 3;
 }
+
+enum EInclusionMode{
+    im_include = 0;
+    im_exclude = 1;
+};
+
+enum ECrossoverInclusionMode{
+    cim_select_all = 0;
+    cim_select_pure = 1;
+    cim_select_crossovers = 2;
+};
+
+message FandomStateToken{
+    int32 id                                       = 1;
+    EInclusionMode inclusion_mode                   = 2;
+    ECrossoverInclusionMode crossover_inclusion_mode = 3;
+
+}
