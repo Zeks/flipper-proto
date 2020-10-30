@@ -8,7 +8,7 @@ import "recommendations/diagnostic_recommendations.proto";
 import "server_base_structs.proto";
 
 package ProtoSpace;
-option optimize_for = LITE_RUNTIME;
+//option optimize_for = LITE_RUNTIME;
 
 message TagsToken{
     repeated int32 all_tags       = 1;

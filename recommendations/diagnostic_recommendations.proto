@@ -3,7 +3,7 @@ import "server_base_structs.proto";
 import "recommendations/recommendations.proto";
 
 package ProtoSpace;
-option optimize_for = LITE_RUNTIME;
+//option optimize_for = LITE_RUNTIME;
 
 message DiagnosticRecommendationListCreationRequest{
     ControlInfo controls                        = 1;

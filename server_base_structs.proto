@@ -2,7 +2,7 @@ syntax = "proto3";
 
 
 package ProtoSpace;
-option optimize_for = LITE_RUNTIME;
+//option optimize_for = LITE_RUNTIME;
 
 message ProtocolVersion{
     int32 major_version    = 1;

@@ -1,7 +1,7 @@
 syntax = "proto3";
 import "server_base_structs.proto";
 package ProtoSpace;
-option optimize_for = LITE_RUNTIME;
+//option optimize_for = LITE_RUNTIME;
 
 message IgnoredFandomsToken{
     repeated int32 fandom_ids           = 1;
