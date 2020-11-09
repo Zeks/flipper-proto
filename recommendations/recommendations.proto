@@ -37,6 +37,8 @@ message RecommendationListParams{
     bool use_mood_filtering             = 7;
     bool use_dead_fic_ignore            = 8;
     bool use_dislikes                   = 9;
+    int32 list_size_multiplier          = 10;
+    int32 source_favourites_cutoff      = 11;
     
 }
 
