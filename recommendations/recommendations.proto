@@ -67,6 +67,7 @@ message RecommendationListData{
                                                 
     map<int32, int32> match_report              = 10;
     repeated RecommendationBreakdown breakdowns = 11;
+    repeated int32 fic_votes                    = 12;
     
 }
 
