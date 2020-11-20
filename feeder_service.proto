@@ -19,6 +19,7 @@ message RecommendationListDataToken
 {
     repeated int32 list_of_fics                     = 1;
     repeated int32 list_of_matches                  = 2;
+    repeated int32 list_of_pure_votes               = 3;
 }
 
 message ScoreListDataToken
