@@ -180,6 +180,8 @@ message Filter{
     sm_rev_to_fav        = 8;
     sm_genre_values      = 9;
     sm_genre_scores      = 10;
+    sm_minimize_dislikes = 11;
+    sm_gems              = 12;
    }
     enum ERatingFilter{
         rt_t_m        = 0;
