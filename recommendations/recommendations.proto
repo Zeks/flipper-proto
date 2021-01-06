@@ -15,6 +15,7 @@ message NegativeTagsToken{
 
 message ResponseDataControls{
     bool ignore_breakdowns = 1;
+    int32 output_size      = 2; 
 }
 
 message RecommendationListRequestData{
