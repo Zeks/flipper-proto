@@ -155,6 +155,17 @@ message SnoozeFilter{
     bool display_expired                   = 2;
 }
 
+message FicDateFilter{
+    enum FicDateMode{
+        mode_none                   = 0;
+        mode_start                  = 1;
+        mode_end                    = 2;
+    };                          
+    string fic_date_start                 = 1;
+    string fic_date_end                   = 2;
+    FicDateMode date_filter_mode          = 3;   
+}
+
 message Filter{
     enum EFilterMode{
         filtering_undefined          = 0;
@@ -211,4 +222,5 @@ message Filter{
     RecommendationsFilter recommendations       = 15;
     GenreFilter genre_filter                    = 16;
     SubGenreFilter subgenre_filter              = 17;
+    FicDateFilter fic_date_filter               = 18;
 }
