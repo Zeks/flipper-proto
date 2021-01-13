@@ -85,14 +85,12 @@ message SearchByIdListTask
     repeated SearchId task_list   = 2;
 }
 
-message SearchResult{
-    int32 id      = 1;
-    bool success  = 2;
-    Fanfic fanfic = 3;
+message SearchByIdListResult{
+    Fanfic fanfic = 1;
 }
 
 message SearchByIdListResponse{
-    repeated SearchResult search_result = 1;
+    repeated SearchByIdListResult search_result = 1;
     ResponseInfo response_info          = 2;
 }
 
