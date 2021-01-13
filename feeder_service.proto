@@ -81,8 +81,8 @@ message SearchByIdListTask
         ffn         = 0;
         db          = 1;
     };
-    ControlInfo controls = 1;
-    SearchId task_list   = 2;
+    ControlInfo controls          = 1;
+    repeated SearchId task_list   = 2;
 }
 
 message SearchResult{
