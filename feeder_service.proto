@@ -82,7 +82,7 @@ message SearchByIdListTask
         db          = 1;
     };
     ControlInfo controls = 1;
-    SearchId search_id   = 2;
+    SearchId task_list   = 2;
 }
 
 message SearchResult{
