@@ -66,6 +66,36 @@ message SearchByFFNIDResponse{
     ResponseInfo response_info            = 3;
 }
 
+message SearchId{
+    enum IDType{
+        ffn         = 0;
+        db          = 1;
+    };
+    int32 id         = 1;
+    IDType id_type   = 2;
+}
+
+message SearchByIdListTask
+{
+    enum IDType{
+        ffn         = 0;
+        db          = 1;
+    };
+    ControlInfo controls = 1;
+    SearchId search_id   = 2;
+}
+
+message SearchResult{
+    int32 id      = 1;
+    bool success  = 2;
+    Fanfic fanfic = 3;
+}
+
+message SearchByIdListResponse{
+    repeated SearchResult search_result = 1;
+    ResponseInfo response_info          = 2;
+}
+
 
 message SyncFandomListTask{
     ControlInfo controls    = 1;
@@ -219,6 +249,7 @@ service Feeder {
     rpc GetStatus(StatusRequest) returns (StatusResponse) {}
     rpc Search(SearchTask) returns (SearchResponse) {}
     rpc SearchByFFNID(SearchByFFNIDTask) returns (SearchByFFNIDResponse) {}
+    rpc SearchByIdList(SearchByIdListTask) returns (SearchByIdListResponse) {}
     rpc GetFicCount(FicCountTask) returns (FicCountResponse) {}
     rpc SyncFandomList(SyncFandomListTask) returns (SyncFandomListResponse) {}
     rpc RecommendationListCreation(RecommendationListCreationRequest) returns (RecommendationListCreationResponse) {}
