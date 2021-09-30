@@ -49,6 +49,7 @@ message RecListUserData{
     NegativeTagsToken negative_feedback = 2;
     repeated int32 liked_authors        = 3;
     repeated int32 ignored_fics         = 4;
+    repeated int32 tagged_fics          = 5;
 }
 
 
