@@ -166,6 +166,12 @@ message FicDateFilter{
     FicDateMode date_filter_mode          = 3;   
 }
 
+message ExpirationFilter{
+    int32 disable_expired_authors         = 1;
+    int32 disable_expired_stories         = 2;
+}
+
+
 message Filter{
     enum EFilterMode{
         filtering_undefined          = 0;
@@ -223,4 +229,5 @@ message Filter{
     GenreFilter genre_filter                    = 16;
     SubGenreFilter subgenre_filter              = 17;
     FicDateFilter fic_date_filter               = 18;
+    ExpirationFilter expiration_filter          = 19;
 }
